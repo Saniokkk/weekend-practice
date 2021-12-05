@@ -89,3 +89,41 @@
 //     }
 // } while (check);
 
+// За каждый месяц налоговая начисляет на зп разработчика 5% от суммы.
+// Напишите функцию, в которую пользователь вводит сумму зп
+//  и количество месяцев с помощью prompt() не забываем что промпт возвращает строку.
+// А налоговая вычисляет конечную сумму зп без налогов за количество месяцев,
+// сумму налогов всего и чистый доход разработчика за каждый месяц.
+// Для вычисления суммы с учетом процентов используйте цикл for.
+
+const salaryDev = Number(prompt("Please provide your salary per month"));
+const months = Number(prompt("Please enter quantity of monts on your current job"));
+
+
+function calculateTaxFreeSalaryDev(salaryDev, months) {
+    
+   // let total = 0;
+
+
+    // for (let i = 1; i <= months; i+=1){
+  
+    //     total += salaryDev;
+    //     console.log(total)
+    // }
+
+    const total = salaryDev * months;
+   // const taxFreeTotalSalary = total*0.95;
+    const taxFreeTotalSalary = total - (total * 0.05);
+    const totalTax = total - taxFreeTotalSalary;
+
+    for (let i = 1; i <= months; i += 1) {
+        console.log(`${i} tax free salary per month. ${salaryDev*0.95}`)
+    }
+
+    console.log(`${taxFreeTotalSalary} tax Free Total salary ${totalTax} total tax`);
+   
+}
+
+
+
+calculateTaxFreeSalaryDev(salaryDev, months);
