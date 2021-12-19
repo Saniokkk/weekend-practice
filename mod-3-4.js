@@ -37,4 +37,4 @@ const normalizedInput = (data) => {
 
   return normData;
 };
-console.log("normalizedInput - normalizedInput", normalizedInput(inputData));
+//console.log("normalizedInput - normalizedInput", normalizedInput(inputData));
